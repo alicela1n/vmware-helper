@@ -5,7 +5,7 @@ postinst() {
   install -Dm644 vmware-networks-server.service /etc/systemd/system/vmware-networks-server.service
   install -Dm644 vmware-usbarbitrator.service /etc/systemd/system/vmware-usbarbitrator.service
   install -Dm644 vmware-workstation-server.service /etc/systemd/system/vmware-workstation-server.service
-  install -Dm644 99-vmmodules.install /etc/kernel/install.d/99-vmmodules.install
+  install -Dm755 99-vmmodules.install /etc/kernel/install.d/99-vmmodules.install
   systemctl daemon-reload
   systemctl enable vmware.service vmware-networks-server.service vmware-usbarbitrator.service
   # Installing vmware kernel modules
